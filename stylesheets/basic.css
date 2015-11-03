@@ -220,7 +220,7 @@ img {
 	position: relative;
 	height: 100%;
 	width: 200px;
-	height: 200px;
+	max-height: 200px;
 }
 
 .col1of3.thumbnail {
@@ -229,17 +229,25 @@ img {
 
 .col-1of3.thumbnail img {
 	vertical-align: bottom;
-    border-radius: 5%;
+    border-radius: 1rem;
 }
 
 .col-1of3.thumbnail .details {
-	background: rgba(0,0,0,0.5);
-	color: #FFF;
 	opacity: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+
 	-webkit-transition: opacity 1000ms;
 	-moz-transition: opacity 1000ms;
 	-o-transition: opacity 1000ms;
 	transition: opacity 1000ms;
+}
+
+.col-1of3.thumbnail .details h3{
+    color: lightslategrey;
+    margin-top: 0;
+    font-size: 1rem;
 }
 
 .col-1of3.thumbnail:hover .details {
@@ -247,12 +255,26 @@ img {
 }
 
 @media only screen and (max-width: 767px) {
+    .col-1of3.thumbnail img {
+        vertical-align: bottom;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+    
 	.col-1of3.thumbnail .details {
+        background: lightslategrey;
 		opacity: 1;
+        width: 100%;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
 	}
 	
 	.col-1of3.thumbnail .details h3 {
-		font-size: 0.8rem;
+		margin: 0;
+        font-size: 0.7rem;
+        color: aliceblue;
 	}
 }
 
