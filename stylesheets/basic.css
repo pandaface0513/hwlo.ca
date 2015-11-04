@@ -19,7 +19,7 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
-        .container { width: 100%; max-width: 400px; }
+    .container { width: 100%; }
 }
 
 .container .columns, .container .column, .container section {
@@ -58,22 +58,11 @@ section {
 }
 
 #menu li {
-	display: inline;
+	display: inline-block;
 	border-right: 1px solid #D3D3D3;
 	padding: 0 1.25rem 0;
 	margin-bottom: 0.5rem;
 	text-align: center;
-}
-
-@media only screen and (max-width: 767px) {
-	#menu {
-		margin-left: auto;
-		margin-right: auto;
-	}
-	
-	#menu li {
-		font-size: 0.8rem;
-	}
 }
 
 #menu #last {
@@ -411,3 +400,20 @@ footer {
 }
 	
 	
+@media only screen and (max-width: 767px) {
+	#menu {
+		margin-left: auto;
+		margin-right: auto;
+        padding: 0;
+	}
+	
+	#menu li {
+		font-size: 0.7rem;
+	}
+    
+    #current {
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: #FF9A0D;
+    }
+}

@@ -20,3 +20,8 @@
         .col-1of3 { width: 48%; }
 		.col-1of2 { width: 98%; }
 }
+
+@media only screen and (max-width: 568px) {
+        .col-1of3 { width: 47%; }
+		.col-1of2 { width: 97%; }
+}
